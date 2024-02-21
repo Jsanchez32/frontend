@@ -1,1 +1,116 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+
+}
+body {
+  margin: 0;
+  background-color: #f3f3f3f7;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* Estilos error 404 */
+.not-found-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.not-found-image{
+  width: 600px;
+}
+
+.not-found-text {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+/* Estilos del mat-spinner */
+
+.spinner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
+.button-custom {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.button-custom:hover {
+  background-color: #ff5a19 !important;
+  color: #ffffff !important;
+}
+
+
+.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: #ff5a19 !important;
+}
+
+.mat-mdc-snack-bar-container {
+  &.snackbar-custom {
+    --mdc-snackbar-container-color: #323233;
+    --mat-snack-bar-button-color: #fafafa;
+    --mdc-snackbar-supporting-text-color: #ff5a19 !important;
+  }
+}
+
+
+.footer{
+  color: white;
+  background: rgb(5,157,124) !important; 
+  background: linear-gradient(291deg, rgba(5,157,124,1) 0%, rgba(19,60,76,1) 47%) !important;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 93.5vh;
+}
+
+
+/* Estilos de la toolbar */
+.toolbar-custom {
+  background-color: white !important;
+}
+
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.menu-button {
+  margin-right: 8px;
+}
+
+.logo {
+  width: 120px;
+}
+
+table {
+  width: 100%;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+

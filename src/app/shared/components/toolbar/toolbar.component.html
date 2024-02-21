@@ -1,0 +1,19 @@
+<mat-toolbar class="toolbar-custom">
+  <div class="title-container">
+    <img src="assets/smartdata.png" alt="logo" class="logo" />
+  </div>
+  
+  <div class="spacer"></div>
+  
+  <ng-container *ngIf="!isSmallScreen">
+    <button
+      class="m-2 button-custom"
+      mat-button
+      *ngIf="showBackButton"
+      [routerLink]="getTargetRoute()"
+    >
+      <mat-icon>format_list_bulleted</mat-icon>
+      {{ getButtonText() }}
+    </button>
+  </ng-container>
+</mat-toolbar>

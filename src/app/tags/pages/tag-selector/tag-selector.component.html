@@ -1,0 +1,58 @@
+<app-toolbar [showBackButton]="true"></app-toolbar>
+
+<div class="container mt-4">
+  <div class="row">
+    <h1 class="text-center">Seleccion de Etiquetas</h1>
+    <div class="col">
+      <h2>Nivel 1</h2>
+      <select class="form-select" [(ngModel)]="selectedNivel1" (change)="onNivel1Change()">
+        <option value="" disabled selected>Seleccione la etiqueta</option>
+        <option *ngFor="let tag of nivel1Tags" [value]="tag.nivel1">{{ tag.nivel1 }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="selectedNivel1 && nivel2Tags.length > 0" class="row mt-3">
+    <div class="col">
+      <h2>Nivel 2</h2>
+      <select class="form-select" [(ngModel)]="selectedNivel2" (change)="onNivel2Change()">
+        <option value="" disabled selected>Seleccione la etiqueta</option>
+        <option *ngFor="let tag of nivel2Tags" [value]="tag.nivel2">{{ tag.nivel2 }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="selectedNivel2 && nivel3Tags.length > 0" class="row mt-3">
+    <div class="col">
+      <h2>Nivel 3</h2>
+      <select class="form-select" [(ngModel)]="selectedNivel3" (change)="onNivel3Change()">
+        <option value="" disabled selected>Seleccione la etiqueta</option>
+        <option *ngFor="let tag of nivel3Tags" [value]="tag.nivel3">{{ tag.nivel3 }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div *ngIf="selectedNivel3 && nivel4Tags.length > 0" class="row mt-3">
+    <div class="col">
+      <h2>Nivel 4</h2>
+      <select class="form-select" [(ngModel)]="selectedNivel4">
+        <option value="" disabled selected>Seleccione la etiqueta</option>
+        <option *ngFor="let tag of nivel4Tags" [value]="tag.nivel4">{{ tag.nivel4 }}</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="selectedNivel4" class="row mt-5">
+    <div class="col">
+      <h2>Miga de Pan</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">{{ selectedNivel1 }}</li>
+          <li class="breadcrumb-item">{{ selectedNivel2 }}</li>
+          <li class="breadcrumb-item">{{ selectedNivel3 }}</li>
+          <li class="breadcrumb-item active" aria-current="page">{{ selectedNivel4 }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
