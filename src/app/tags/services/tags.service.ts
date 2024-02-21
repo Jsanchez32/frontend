@@ -8,7 +8,7 @@ import { Tag,Datum} from 'src/app/interfaces/tag-interface';
   providedIn: 'root'
 })
 export class TagService {
-  private apiUrl = 'http://127.0.0.1:8000/api/tag-associations';
+  private apiUrl = 'backendlaravel-production-a62b.up.railway.app/api/tag-associations';
 
   constructor(private http: HttpClient) { }
 
